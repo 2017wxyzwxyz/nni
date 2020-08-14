@@ -55,11 +55,11 @@ nni.report_final_result(best_acc)
 如果需要保存并读取**最佳模型**，推荐采用以下方法。
 
 ```python
-# 1. 使用 NNI API
-## 从 Web 界面获取最佳模型的 ID
-## 或查看 `nni/experiments/experiment_id/log/model_path/best_model.txt' 文件
+# 1. Use NNI API
+## You can get the best model ID from WebUI
+## or `nni-experiments/experiment_id/log/model_path/best_model.txt'
 
-## 从 JSON 文件中读取，并使用 NNI API 来加载
+## read the json string from model file and load it with NNI API
 with open("best-model.json") as json_file:
     json_of_model = json_file.read()
 model = build_graph_from_json(json_of_model)
